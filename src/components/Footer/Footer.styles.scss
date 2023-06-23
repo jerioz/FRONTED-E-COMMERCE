@@ -1,0 +1,28 @@
+.footer {
+    &__terms {
+    // background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    
+}
+    &__terms-item {
+    color: grey;
+    font-size: 15px;
+    padding-left: 1rem;
+    list-style: none;
+    display: inline-block;
+    margin-right: 50px;
+   
+   
+}
+    &__icon {
+    margin-right: 10rem;
+    padding-top: 0.6rem;
+    }
+    &__icon-item {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px; 
+}
+}

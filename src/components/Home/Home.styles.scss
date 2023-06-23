@@ -1,0 +1,21 @@
+.home {
+    &__photos {
+        display: flex;
+        flex-direction: column;
+        // height: 100vh;
+    }
+    &__news-listPhoto {
+        display: flex;
+        justify-content: space-around;
+       padding-bottom: 50px;
+        
+        }
+    
+    &__news-photo {
+        width: 200px;
+        height: 200px;
+        border-radius: 25%;
+        margin-bottom: 10px;
+        }
+        
+}
