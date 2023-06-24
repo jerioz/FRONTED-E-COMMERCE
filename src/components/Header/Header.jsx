@@ -1,8 +1,21 @@
 import React from 'react'
 import './Header.styles.scss'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useContext } from "react";
+import { UserContext } from '../../context/UserContext/UserState'
 
 const Header = () => {
+  const { token, logout } = useContext(UserContext)
+	const navigate = useNavigate()
+
+
+	const logoutUser = () => {
+		logout()
+		setTimeout(() => {
+			navigate('/')
+		}, 500)
+	}
+  
   return (
     <React.Fragment>
     <div>
@@ -11,8 +24,21 @@ const Header = () => {
         <nav className='menu-nav'>
             <ul className='menu-nav__newsPage-list'>
                 <li className='menu-nav__newsPage-item'><Link to='/' className='menu-nav__newsPage-link'>Home</Link></li>
-                {/* <li className='menu-nav__newsPage-item'><Link to='/form' className='menu-nav__newsPage-link'>Form</Link></li>
-                <li className='menu-nav__newsPage-item'><Link to='/list' className='menu-nav__newsPage-link'>ListNews</Link></li> */}
+                <li className='menu-nav__newsPage-item'><Link to='/register' className='menu-nav__newsPage-link'>Register</Link></li>
+                 {token ? ( 
+                  <>
+                  <span onClick={logoutUser}>
+                    <li className='menu-nav__newsPage-item'><Link to='/' className='menu-nav__newsPage-link'>Logout</Link></li>
+                  </span>
+                  <span>
+                    <li className='menu-nav__newsPage-item'><Link to='/profile' className='menu-nav__newsPage-link'>Profile</Link></li>
+                  </span>
+                  </>
+                 ) : (
+                  <span>
+                <li className='menu-nav__newsPage-item'><Link to='/login' className='menu-nav__newsPage-link'>Login</Link></li>
+                </span>
+                 )}
             </ul>
         </nav>
     </header>
