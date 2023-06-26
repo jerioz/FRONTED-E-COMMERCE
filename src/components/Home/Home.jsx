@@ -10,6 +10,7 @@ import Photo5 from '../../assets/Photos/Photo5.jpg'
 const Home = () => {
   return (
     <>
+    <h1 className='home__title'>New Releases</h1>
     <div className='home__photos'>
       <div className='home__news-listPhoto'>
        <img src={Photo} alt='logo' className='home__news-photo'/>

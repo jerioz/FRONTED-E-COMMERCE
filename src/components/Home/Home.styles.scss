@@ -1,8 +1,12 @@
 .home {
+    &__title {
+        text-align: center;
+        padding-bottom: 30px;
+    }
     &__photos {
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 70vh;
     }
     &__news-listPhoto {
         display: flex;
