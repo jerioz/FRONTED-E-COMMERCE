@@ -8,6 +8,7 @@ import RegisterView from './views/Register/RegisterView'
 import ProfileView from './views/Profile/ProfileView'
 import ProductsView from './views/Products/ProductsView'
 import { ProductsProvider } from './context/ProductsContext/ProductsState'
+import CartView from './views/Cart/CartView'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path='/login' element={<LoginView />} />
         <Route path='/profile' element={<ProfileView />} />
         <Route path='/products' element={<ProductsView />} />
+        <Route path='/cart' element={<CartView />} />
         </Routes>
         </ProductsProvider>
       </UserProvider>

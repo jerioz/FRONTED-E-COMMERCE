@@ -20,8 +20,6 @@ const Profile = () => {
     <>
     <div className="profile__data">
         <h1>Profile</h1>
-        {/* <h3>Name: {user.name}</h3>
-        <h3>Email: {user.email}</h3> */}
         <Space direction="vertical" size={16}>
     <Card className="profile__card"
       title={user.name}

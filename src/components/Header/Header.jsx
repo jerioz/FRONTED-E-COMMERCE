@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { UserContext } from '../../context/UserContext/UserState'
 
 import { Menu } from 'antd'
-import { LogoutOutlined, LoginOutlined, UserOutlined, HomeOutlined, UserAddOutlined, ShopOutlined } from '@ant-design/icons'
+import { LogoutOutlined, LoginOutlined, UserOutlined, HomeOutlined, UserAddOutlined, ShopOutlined, ShoppingCartOutlined } from '@ant-design/icons'
 
 const Header = () => {
   const { token, logout } = useContext(UserContext)
@@ -64,6 +64,12 @@ const Header = () => {
 						<Menu.Item key="profile" icon={<UserOutlined />}>
 							<Link to="/profile">Profile</Link>
 						</Menu.Item>
+            <Menu.Item key="products" icon={<ShopOutlined />}>
+						<Link to="/products">Products</Link>
+					</Menu.Item>
+            <Menu.Item key="cart" icon={<ShoppingCartOutlined />}>
+						<Link to="/cart">Cart</Link>
+					</Menu.Item>
 					</>
 				) : (
           <>
