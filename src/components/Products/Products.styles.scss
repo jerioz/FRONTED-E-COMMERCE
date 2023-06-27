@@ -1,0 +1,16 @@
+.releases {
+    &__title {
+        text-align: center;
+    }
+    &__container-products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__card {
+        border: 1px solid grey;
+        padding: 1rem;
+        text-align: center;
+        margin: 1rem;
+    }
+}
