@@ -44,8 +44,6 @@ return(
       title={product.name}
       description={`${product.price} €`}
     />
-    {/* <button onClick={() => addCart(product)}>Add Cart</button> */}
-    
     <Button type="primary" className="releases__button" onClick={() => addCart(product)} icon={<ShoppingCartOutlined />}>addCart</Button>
   </Card>
     </div>
