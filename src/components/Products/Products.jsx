@@ -28,12 +28,12 @@ return(
     <Card
     style={{ width: 300 }}
     className="releases__card"
-    // cover={
-    //   <img
-    //     alt="example"
-    //     src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-    //   />
-    // }
+    cover={
+      <img
+        alt="photo"
+        src={product.image}
+      />
+    }
   >
     <Meta
       title={product.name}
@@ -43,11 +43,10 @@ return(
     <Button type="primary" className="releases__button" onClick={() => addCart(product)} icon={<ShoppingCartOutlined />}>addCart</Button>
   </Card>
     </div>
+    
     ))}
     </section>
    </>
 )
-
 }
-
 export default Products

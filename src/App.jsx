@@ -9,7 +9,7 @@ import ProfileView from './views/Profile/ProfileView'
 import ProductsView from './views/Products/ProductsView'
 import { ProductsProvider } from './context/ProductsContext/ProductsState'
 import CartView from './views/Cart/CartView'
-
+import { OrdersProvider } from './context/OrderContext/OrderState'
 
 function App() {
 
@@ -18,6 +18,7 @@ function App() {
     <BrowserRouter>
     <UserProvider>
       <ProductsProvider>
+        <OrdersProvider>
       <Header />
         <Routes>
         <Route path='/' element={<HomeView />} />
@@ -27,6 +28,7 @@ function App() {
         <Route path='/products' element={<ProductsView />} />
         <Route path='/cart' element={<CartView />} />
         </Routes>
+        </OrdersProvider>
         </ProductsProvider>
       </UserProvider>
       <Footer />

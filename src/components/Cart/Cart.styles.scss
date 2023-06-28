@@ -1,0 +1,25 @@
+.cart {
+    &__title {
+        text-align: center;
+    }
+    &__container-cart {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        position: relative;
+    }
+    &__card {
+        text-align: center;
+        border: 1px solid grey;
+        margin: 1rem;
+    }
+    &__container-button {
+        display: flex;
+        justify-content: center;
+    }
+    &__button {
+        margin: 1rem;
+        margin-bottom: 2rem;
+    }
+}
