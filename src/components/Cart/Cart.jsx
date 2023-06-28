@@ -3,7 +3,8 @@ import { ProductsContext } from "../../context/ProductsContext/ProductsState"
 import { OrdersContext } from "../../context/OrderContext/OrderState"
 import { Card, Button } from 'antd'
 import { ClearOutlined, ShoppingOutlined } from '@ant-design/icons'
-import './Cart.styles.scss'
+import './Cart.styles.scss' 
+import Photo from '../../assets/Photos_releases/vinyl.png'
 
 const { Meta } = Card;
 
@@ -33,12 +34,12 @@ const Cart = () => {
     <Card
     style={{ width: 300 }}
     className="cart__card"
-    // cover={
-    //   <img
-    //     alt="example"
-    //     src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-    //   />
-    // }
+    cover={
+      <img
+        alt="photo"
+        src={Photo}
+      />
+    }
   >
     <Meta
       title={cartItem.name}
@@ -48,16 +49,16 @@ const Cart = () => {
     </div>
     )) || <p>You don´t have products in your cart</p>} 
     </section>
+    <section>
         {cart.length > 0 && (
 				<div className="cart__container-button">
-					{/* <button onClick={() => clearCart()}>Clear cart</button> */}
-					{/* <button onClick={() => createNewOrder()}>Create Order</button> */}
           <Button type="primary" danger className="cart__button" onClick={() => clearCart()} icon={<ClearOutlined />}>Clear Cart</Button>
           <Button type="primary" className="cart__button" onClick={() => createNewOrder()} icon={<ShoppingOutlined />}>Create Order</Button>
 				</div>
 			)}
+    </section>
     </>
-    )
+  )
 
 }
 

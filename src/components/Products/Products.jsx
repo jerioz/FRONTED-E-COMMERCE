@@ -3,6 +3,10 @@ import { ProductsContext } from "../../context/ProductsContext/ProductsState";
 import './Products.styles.scss'
 import { Card, Button } from 'antd';
 import { ShoppingCartOutlined } from '@ant-design/icons'
+import Photo from '../../assets/Photos_releases/vinyl.png'
+
+
+
 
 
 const { Meta } = Card;
@@ -31,7 +35,8 @@ return(
     cover={
       <img
         alt="photo"
-        src={product.image}
+        src={Photo}
+       
       />
     }
   >
