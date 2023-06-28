@@ -42,7 +42,7 @@ const Cart = () => {
   >
     <Meta
       title={cartItem.name}
-      description={cartItem.price}
+      description={`${cartItem.price}€`}
     />
   </Card>
     </div>

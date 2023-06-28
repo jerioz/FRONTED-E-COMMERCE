@@ -8,7 +8,7 @@ import { ShoppingCartOutlined } from '@ant-design/icons'
 const { Meta } = Card;
 
 const Products = () => {
-    const { products, getProducts, addCart, cart } = useContext(ProductsContext)
+    const { products, getProducts, addCart, cart, token } = useContext(ProductsContext)
 
 
 useEffect(() => {
@@ -37,9 +37,10 @@ return(
   >
     <Meta
       title={product.name}
-      description={product.price}
+      description={`${product.price} €`}
     />
     {/* <button onClick={() => addCart(product)}>Add Cart</button> */}
+    
     <Button type="primary" className="releases__button" onClick={() => addCart(product)} icon={<ShoppingCartOutlined />}>addCart</Button>
   </Card>
     </div>

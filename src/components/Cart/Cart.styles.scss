@@ -4,10 +4,10 @@
     }
     &__container-cart {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start;
         height: 100vh;
-        position: relative;
     }
     &__card {
         text-align: center;

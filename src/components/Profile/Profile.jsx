@@ -1,7 +1,7 @@
 import React, { useContext, useEffect} from "react";
 import { UserContext } from '../../context/UserContext/UserState'
 import './Profile.styles.scss'
-import { Card, Space } from 'antd';
+import { Card, Space, Spin } from 'antd';
 
 const Profile = () => {
     const { getUserInfo, user } = useContext(UserContext);
@@ -13,7 +13,7 @@ const Profile = () => {
     }, []);
     
     if (!user) {
-        return <span>Cargando...</span>;
+      return <Spin size="large" />
     }
     
     return (
