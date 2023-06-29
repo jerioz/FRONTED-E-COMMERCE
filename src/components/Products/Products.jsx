@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { ProductsContext } from "../../context/ProductsContext/ProductsState";
 import './Products.styles.scss'
-import { Card, Button } from 'antd';
+import { Card, Button, Spin } from 'antd';
 import { ShoppingCartOutlined } from '@ant-design/icons'
 import Photo from '../../assets/Photos_releases/vinyl.png'
 

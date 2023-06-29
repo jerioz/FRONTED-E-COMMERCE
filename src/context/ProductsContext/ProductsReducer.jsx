@@ -17,6 +17,21 @@ const products = (state, action) => {
                 ...state,
                 products: [...state.products, action.payload],
             };
+        case "GET_PRODUCT_BY_ID":
+            return {
+                ...state,
+                product: action.payload,
+            };
+        case "EDIT_PRODUCT":
+            return {
+                ...state,
+                products: state.products.map((product) => {
+                    if (product.id === action.payload.id) {
+                        product = action.payload.product;
+                    }
+                    return product;
+                }),
+            };
         case "ADD_CART":
             return {
                 ...state,
