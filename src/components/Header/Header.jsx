@@ -4,11 +4,11 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useContext } from "react";
 import { UserContext } from '../../context/UserContext/UserState'
 
-import { Menu } from 'antd'
-import { LogoutOutlined, LoginOutlined, UserOutlined, HomeOutlined, UserAddOutlined, ShopOutlined, ShoppingCartOutlined } from '@ant-design/icons'
+import { Menu, } from 'antd'
+import { LogoutOutlined, LoginOutlined, UserOutlined, HomeOutlined, UserAddOutlined, ShopOutlined, ShoppingCartOutlined, SolutionOutlined } from '@ant-design/icons'
 
 const Header = () => {
-  const { token, logout } = useContext(UserContext)
+  const { token, logout, admin } = useContext(UserContext)
 	const navigate = useNavigate()
 
 
@@ -32,6 +32,7 @@ const Header = () => {
       <Menu.Item key="register" icon={<UserAddOutlined />}>
 					<Link to="/register">Register</Link>
 			</Menu.Item>
+			
 				{token ? (
 					<>
 						<Menu.Item
@@ -50,7 +51,11 @@ const Header = () => {
             <Menu.Item key="cart" icon={<ShoppingCartOutlined />}>
 						<Link to="/cart">Cart</Link>
 					</Menu.Item>
+					<Menu.Item key="admin" icon={<SolutionOutlined />}>
+					<Link to="/admin">Admin</Link>
+				</Menu.Item>
 					</>
+				
 				) : (
           <>
 					<Menu.Item key="login" icon={<LoginOutlined />}>
@@ -59,8 +64,10 @@ const Header = () => {
           <Menu.Item key="products" icon={<ShopOutlined />}>
 						<Link to="/products">Products</Link>
 					</Menu.Item>
+				
           </>
 				)}
+				
 			</Menu>
 		</nav>
     </header>

@@ -1,7 +1,8 @@
 .profile {
+  
     &__data {
         text-align: center;
-        height: 100vh;
+        min-height: 100vh;
     }
     &__card {
         border-radius: 10px;

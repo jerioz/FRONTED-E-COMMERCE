@@ -10,6 +10,7 @@ import ProductsView from './views/Products/ProductsView'
 import { ProductsProvider } from './context/ProductsContext/ProductsState'
 import CartView from './views/Cart/CartView'
 import { OrdersProvider } from './context/OrderContext/OrderState'
+import AdminView from './views/Admin/AdminView'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='/profile' element={<ProfileView />} />
         <Route path='/products' element={<ProductsView />} />
         <Route path='/cart' element={<CartView />} />
+        <Route path='/admin' element={<AdminView />} />
         </Routes>
         </OrdersProvider>
         </ProductsProvider>

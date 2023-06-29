@@ -6,7 +6,8 @@ const cart = JSON.parse(localStorage.getItem("cart"));
 
 const initialState = {
     products: [],
-    cart: cart ? cart : []
+    cart: cart ? cart : [],
+    product: {}
 };
 
 
@@ -25,6 +26,36 @@ export const ProductsProvider = ({ children }) => {
         });
         return res;
     };
+
+    const deleteProduct = async (id) => {
+        const token = JSON.parse(localStorage.getItem("token"));
+        
+        const res = await axios.delete(`${API_URL}/products/id/${id}`, {
+            headers: {
+                authorization: token,
+            },
+        });
+        dispatch({
+            type: "DELETE_PRODUCT",
+            payload: res.data,
+        });
+        return res;
+    };
+
+    const createProduct = async (product) => {
+        const token = JSON.parse(localStorage.getItem("token"));
+        const res = await axios.post(`${API_URL}/products`, product, {
+            headers: {
+                authorization: token,
+            },
+        });
+        dispatch({
+            type: "CREATE_PRODUCT",
+            payload: res.data,
+        });
+        return res;
+        };
+
     const addCart = (product) => {
         dispatch({
             type: "ADD_CART",
@@ -41,7 +72,10 @@ export const ProductsProvider = ({ children }) => {
         value={{
             products: state.products,
             cart: state.cart,
+            product: state.product,
             getProducts,
+            deleteProduct,
+            createProduct,
             addCart,
             clearCart,
         }}

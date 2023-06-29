@@ -4,9 +4,12 @@ import UserReducer from "./UserReducer";
 
 const token = JSON.parse(localStorage.getItem("token"));
 
+const admin = JSON.parse(localStorage.getItem("role"));
+
 const initialState = {
     token: token ? token : null,
     user: null,
+    role: admin ? role: null,
 };
 
 const API_URL = "http://localhost:3000";

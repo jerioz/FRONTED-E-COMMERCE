@@ -5,10 +5,6 @@ import { Card, Button } from 'antd';
 import { ShoppingCartOutlined } from '@ant-design/icons'
 import Photo from '../../assets/Photos_releases/vinyl.png'
 
-
-
-
-
 const { Meta } = Card;
 
 const Products = () => {
@@ -35,8 +31,7 @@ return(
     cover={
       <img
         alt="photo"
-        src={Photo}
-       
+        src={Photo}      
       />
     }
   >
