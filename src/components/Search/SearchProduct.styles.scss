@@ -1,0 +1,17 @@
+.search {
+    &__title {
+        text-align: center;
+    }
+    &__container-cart {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+    }
+    &__card {
+        text-align: center;
+        border: 1px solid grey;
+        margin: 1rem;
+    }
+}

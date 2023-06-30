@@ -5,10 +5,10 @@ import { useContext } from "react";
 import { UserContext } from '../../context/UserContext/UserState'
 
 import { Menu, } from 'antd'
-import { LogoutOutlined, LoginOutlined, UserOutlined, HomeOutlined, UserAddOutlined, ShopOutlined, ShoppingCartOutlined, SolutionOutlined } from '@ant-design/icons'
+import { LogoutOutlined, LoginOutlined, UserOutlined, HomeOutlined, UserAddOutlined, ShopOutlined, ShoppingCartOutlined, SolutionOutlined, KeyOutlined } from '@ant-design/icons'
 
 const Header = () => {
-  const { token, logout, admin } = useContext(UserContext)
+  const { token, logout, user } = useContext(UserContext)
 	const navigate = useNavigate()
 
 
@@ -32,6 +32,9 @@ const Header = () => {
       <Menu.Item key="register" icon={<UserAddOutlined />}>
 					<Link to="/register">Register</Link>
 			</Menu.Item>
+			<Menu.Item key="search" icon={<KeyOutlined />}>
+					<Link to="/search">Search</Link>
+			</Menu.Item>
 			
 				{token ? (
 					<>
@@ -51,9 +54,9 @@ const Header = () => {
             <Menu.Item key="cart" icon={<ShoppingCartOutlined />}>
 						<Link to="/cart">Cart</Link>
 					</Menu.Item>
-					<Menu.Item key="admin" icon={<SolutionOutlined />}>
+					{user && user.role === 'admin' && <Menu.Item key="admin" icon={<SolutionOutlined />}>
 					<Link to="/admin">Admin</Link>
-				</Menu.Item>
+				</Menu.Item>}
 					</>
 				
 				) : (

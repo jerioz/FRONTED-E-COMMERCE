@@ -11,6 +11,7 @@ import { ProductsProvider } from './context/ProductsContext/ProductsState'
 import CartView from './views/Cart/CartView'
 import { OrdersProvider } from './context/OrderContext/OrderState'
 import AdminView from './views/Admin/AdminView'
+import SearchView from './views/Search/SearchView'
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
         <Route path='/products' element={<ProductsView />} />
         <Route path='/cart' element={<CartView />} />
         <Route path='/admin' element={<AdminView />} />
+        <Route path='/search' element={<SearchView />} />
         </Routes>
         </OrdersProvider>
         </ProductsProvider>

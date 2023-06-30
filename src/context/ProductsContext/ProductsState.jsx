@@ -24,6 +24,7 @@ export const ProductsProvider = ({ children }) => {
             type: "GET_PRODUCTS",
             payload: res.data,
         });
+        console.log(initialState.products)
         return res;
     };
 
@@ -76,6 +77,16 @@ export const ProductsProvider = ({ children }) => {
         });
         return res;
     };
+    const getProductByName = async (name) => {
+        const res = await axios.get(`${API_URL}/products/name/${name}`);
+        dispatch({
+           type: "GET_PRODUCT_BY_NAME",
+           payload: res.data,
+       });
+       console.log(res)
+       console.log('hola', initialState.product)
+       return res;
+       };
 
     const addCart = (product) => {
         dispatch({
@@ -98,6 +109,7 @@ export const ProductsProvider = ({ children }) => {
             deleteProduct,
             createProduct,
             getProductById,
+            getProductByName,
             editProduct,
             addCart,
             clearCart,

@@ -1,10 +1,6 @@
 import { Button, Form, InputNumber, Input, Upload } from "antd";
-import { UploadOutlined } from '@ant-design/icons'
 import React, { useContext } from "react";
 import { ProductsContext } from "../../../context/ProductsContext/ProductsState";
-
-
-
 
 const CreateProduct = () => {
     const { createProduct } = useContext(ProductsContext);

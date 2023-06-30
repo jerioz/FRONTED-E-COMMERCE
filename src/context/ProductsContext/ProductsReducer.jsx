@@ -22,6 +22,11 @@ const products = (state, action) => {
                 ...state,
                 product: action.payload,
             };
+        case "GET_PRODUCT_BY_NAME":
+            return {
+                ...state,
+                products: action.payload,
+                };
         case "EDIT_PRODUCT":
             return {
                 ...state,
