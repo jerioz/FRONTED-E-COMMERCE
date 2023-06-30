@@ -4,7 +4,7 @@ import { OrdersContext } from "../../context/OrderContext/OrderState"
 import { Card, Button } from 'antd'
 import { ClearOutlined, ShoppingOutlined } from '@ant-design/icons'
 import './Cart.styles.scss' 
-import Photo from '../../assets/Photos_releases/vinyl.png'
+// import Photo from '../../assets/Photos_releases/vinyl.png'
 
 const { Meta } = Card;
 
@@ -37,7 +37,7 @@ const Cart = () => {
     cover={
       <img
         alt="photo"
-        src={Photo}
+        src={cartItem.image}
       />
     }
   >

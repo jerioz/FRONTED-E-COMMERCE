@@ -35,7 +35,9 @@ const SearchProduct = () => {
   </div>
   <section className="search__container-cart">
     {products && products.map((product) => {
+      <div key={product.id}>
       <p>{product.name}</p>
+      </div>
      
     })}
    {/* {product.length > 0 && product.map((productItem) => (
