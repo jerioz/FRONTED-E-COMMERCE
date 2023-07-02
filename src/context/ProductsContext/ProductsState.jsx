@@ -1,6 +1,7 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useState } from "react";
 import axios from 'axios'
 import ProductsReducer from './ProductsReducer'
+
 
 const cart = JSON.parse(localStorage.getItem("cart"));
 
@@ -17,6 +18,7 @@ export const ProductsContext = createContext(initialState);
 
 export const ProductsProvider = ({ children }) => {
     const [state, dispatch] = useReducer(ProductsReducer, initialState);
+
 
     const getProducts = async () => {
         const res = await axios.get(API_URL + "/products/getAll");
@@ -87,7 +89,6 @@ export const ProductsProvider = ({ children }) => {
        console.log('hola', initialState.product)
        return res;
        };
-
     const addCart = (product) => {
         dispatch({
             type: "ADD_CART",
