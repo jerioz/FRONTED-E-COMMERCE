@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { ProductsContext } from "../../context/ProductsContext/ProductsState";
 import { Spin, Card, Button }  from 'antd'
-import Photo from '../../assets/Photos_releases/vinyl.png'
 import EditProduct from "../Products/EditProduct/EditProduct";
 
 const { Meta } = Card;
@@ -38,7 +37,7 @@ const Admin = () => {
          cover={
            <img
              alt="photo"
-             src={Photo}      
+             src={product.image}      
            />
          }
        >
