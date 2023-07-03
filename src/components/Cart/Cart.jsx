@@ -35,6 +35,7 @@ const Cart = () => {
         <img
         alt="photo"
         src={cartItem.image}
+        style={{height: 300}}
         />}
         >
           <Meta

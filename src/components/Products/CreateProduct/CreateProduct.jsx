@@ -21,7 +21,6 @@ return(
       wrapperCol={{ span: 16 }}
     >
       <FormProduct />
-      
       <Form.Item wrapperCol={{ offset: 6, span: 16 }}>
         <Button type="primary" htmlType="submit">
           Add Product
@@ -29,7 +28,6 @@ return(
       </Form.Item>
   </Form> 
   </div>
-  <FormImage />
   </>
   );
 };

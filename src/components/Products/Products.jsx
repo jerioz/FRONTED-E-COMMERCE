@@ -31,6 +31,7 @@ return(
         alt="photo"
         src={product.image}
         className="releases__img"
+        style={{height: 300}}
         />}
       >
         <Meta

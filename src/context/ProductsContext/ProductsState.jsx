@@ -64,6 +64,7 @@ export const ProductsProvider = ({ children }) => {
             type: "GET_PRODUCT_BY_ID",
             payload: res.data,
         });
+        console.log(state.products)
         return res;
         };
     const editProduct = async (product, id) => {
@@ -73,6 +74,7 @@ export const ProductsProvider = ({ children }) => {
                 authorization: token,
             },
         });
+
         dispatch({
             type: "EDIT_PRODUCT",
             payload: res.data,
@@ -81,14 +83,13 @@ export const ProductsProvider = ({ children }) => {
     };
     const getProductByName = async (name) => {
         const res = await axios.get(`${API_URL}/products/name/${name}`);
-        dispatch({
-           type: "GET_PRODUCT_BY_NAME",
-           payload: res.data,
-       });
-       console.log(res)
-       console.log('hola', initialState.product)
+       dispatch({
+            type: "GET_PRODUCT_BY_NAME",
+            payload: res.data,
+        });
+        console.log('qu epas tú', state.products)
        return res;
-       };
+    };
     const addCart = (product) => {
         dispatch({
             type: "ADD_CART",

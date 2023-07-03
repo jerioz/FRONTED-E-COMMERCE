@@ -37,7 +37,8 @@ const Admin = () => {
               cover={
                 <img
                 alt="photo"
-                src={product.image}      
+                src={product.image}
+                style={{height: 300}}
                />
               }
               >

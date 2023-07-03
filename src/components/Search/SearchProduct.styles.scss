@@ -2,6 +2,10 @@
     &__title {
         text-align: center;
     }
+    &__container-search {
+        display: flex;
+        justify-content: center;
+    }
     &__container-cart {
         display: flex;
         flex-wrap: wrap;
