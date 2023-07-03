@@ -2,7 +2,7 @@ import { Button, Form, InputNumber, Input, Upload } from "antd";
 import React, { useContext } from "react";
 import { ProductsContext } from "../../../context/ProductsContext/ProductsState";
 import FormProduct from "../../Form/FormProduct";
-import FormImage from "../../FormImage/FormImage";
+
 
 
 
