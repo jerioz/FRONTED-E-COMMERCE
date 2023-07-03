@@ -38,8 +38,7 @@ const SearchProduct = () => {
       <div key={product.id}>
         <p>{product.name}</p>
       </div>
-     
-    })}
+     })}
    {/* {product.length > 0 && product.map((productItem) => (
     <div key={productItem.id}>
     <Card

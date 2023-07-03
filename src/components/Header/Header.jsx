@@ -21,8 +21,8 @@ const Header = () => {
   return (
     <React.Fragment>
     <div>
-    <header className= 'header__newsPage'>
-		<h1 className='header__newsPage-title'>Blue Suede Shoes Records</h1>
+    <header className= 'header__eCommercePage'>
+		<h1 className='header__eCommercePage-title'>Blue Suede Shoes Records</h1>
 		<nav>
 			<Menu mode="horizontal" className='menu-nav__menu' defaultSelectedKeys={['profile']}>
 				<Menu.Item key="home" icon={<HomeOutlined />}>

@@ -12,15 +12,15 @@ const Home = () => {
     <>
     <h1 className='home__title'>New Releases</h1>
     <div className='home__photos'>
-      <div className='home__news-listPhoto'>
-       <img src={Photo} alt='logo' className='home__news-photo'/>
-       <img src={Photo1} alt='logo' className='home__news-photo'/>
-       <img src={Photo2} alt='logo' className='home__news-photo'/>
+      <div className='home__eCommerce-listPhoto'>
+       <img src={Photo} alt='logo' className='home__eCommerce-photo'/>
+       <img src={Photo1} alt='logo' className='home__eCommerce-photo'/>
+       <img src={Photo2} alt='logo' className='home__eCommerce-photo'/>
       </div>
-      <div className='home__news-listPhoto'>
-       <img src={Photo3} alt='logo' className='home__news-photo'/>
-       <img src={Photo4} alt='logo' className='home__news-photo'/>
-       <img src={Photo5} alt='logo' className='home__news-photo'/>
+      <div className='home__eCommerce-listPhoto'>
+       <img src={Photo3} alt='logo' className='home__eCommerce-photo'/>
+       <img src={Photo4} alt='logo' className='home__eCommerce-photo'/>
+       <img src={Photo5} alt='logo' className='home__eCommerce-photo'/>
      </div>
     </div>
     </>
