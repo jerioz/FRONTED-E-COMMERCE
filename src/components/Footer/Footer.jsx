@@ -6,10 +6,9 @@ import '../../components/Footer/Footer.styles.scss'
 
 const Footer = () => {
   return (
-    <>
-    
+  <>
     <footer className="footer__terms">
-    <div >
+      <div >
         <ul className='footer__terms-list'>
             <li className='footer__terms-item'>Privacy policy</li>
             <li className='footer__terms-item'>Terms of Service</li>
@@ -17,17 +16,14 @@ const Footer = () => {
             <li className='footer__terms-item'>Help</li>
             <li className='footer__terms-item'>Subscriptors</li>
         </ul>
-    </div>
-    <div className='footer__icon'>
-        
+      </div>
+      <div className='footer__icon'>
         <img src={logo1} alt="facebook" className='footer__icon-item' />
         <img src={logo3} alt="twitter" className='footer__icon-item' />
         <img src={logo2} alt="instagram" className='footer__icon-item' />
-
-    </div>
-</footer>
-      
-    </>
+      </div>
+    </footer>
+  </>
   )
 }
 

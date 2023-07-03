@@ -16,28 +16,28 @@ import SearchView from './views/Search/SearchView'
 function App() {
 
   return (
-    <>
+  <>
     <BrowserRouter>
-    <UserProvider>
-      <ProductsProvider>
-        <OrdersProvider>
-      <Header />
-        <Routes>
-        <Route path='/' element={<HomeView />} />
-        <Route path='/register' element={<RegisterView />} />
-        <Route path='/login' element={<LoginView />} />
-        <Route path='/profile' element={<ProfileView />} />
-        <Route path='/products' element={<ProductsView />} />
-        <Route path='/cart' element={<CartView />} />
-        <Route path='/admin' element={<AdminView />} />
-        <Route path='/search' element={<SearchView />} />
-        </Routes>
-        </OrdersProvider>
-        </ProductsProvider>
-      </UserProvider>
+      <UserProvider>
+        <ProductsProvider>
+          <OrdersProvider>
+            <Header />
+              <Routes>
+                <Route path='/' element={<HomeView />} />
+                <Route path='/register' element={<RegisterView />} />
+                <Route path='/login' element={<LoginView />} />
+                <Route path='/profile' element={<ProfileView />} />
+                <Route path='/products' element={<ProductsView />} />
+                <Route path='/cart' element={<CartView />} />
+                <Route path='/admin' element={<AdminView />} />
+                <Route path='/search' element={<SearchView />} />
+              </Routes>
+            </OrdersProvider>
+          </ProductsProvider>
+        </UserProvider>
       <Footer />
     </BrowserRouter>
-    </>
+  </>
   )
 }
 

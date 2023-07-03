@@ -100,6 +100,7 @@ export const ProductsProvider = ({ children }) => {
             type: "CLEAR_CART",
         });
     };
+
     return (
     <ProductsContext.Provider
         value={{

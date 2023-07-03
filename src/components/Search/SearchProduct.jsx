@@ -17,26 +17,26 @@ const SearchProduct = () => {
 
   useEffect(() => {
     getProductByName();
-}, []);
+  }, []);
 
   return (
     <>
     <h1 className="search__title">Search Products</h1>
     <div className='search__container-cart'>
       <Space>
-    <Search
-      placeholder="input search text"
-      allowClear
-      enterButton="Search"
-      size="large"
-      onSearch={onSearch}
-    />
-  </Space>
-  </div>
-  <section className="search__container-cart">
+        <Search
+        placeholder="input search text"
+        allowClear
+        enterButton="Search"
+        size="large"
+        onSearch={onSearch}
+        />
+      </Space>
+    </div>
+    <section className="search__container-cart">
     {products && products.map((product) => {
       <div key={product.id}>
-      <p>{product.name}</p>
+        <p>{product.name}</p>
       </div>
      
     })}
