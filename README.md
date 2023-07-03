@@ -27,6 +27,7 @@ We will install the dependencies that we need for this project.
   npm install sass
   npm install react-router-dom@6
   npm i axios  
+  npm i antd
 ```
 
 To avoid having to start the project all the time.
